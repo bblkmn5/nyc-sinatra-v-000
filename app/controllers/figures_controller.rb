@@ -12,7 +12,9 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-    @figure = Figure.create(name: params[:name])
-    erb :'/'
+    @figure = Figure.create(name: params[:name], landmark: params[:landmark], title: params[:title])
+    @figure.save
+
+    redirect "/figures/#{@figure}"
   end
 end
