@@ -9,7 +9,7 @@
     <input type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>" id="<%= landmark.name %>" <%='checked' if @figure.landmarks.include?(landmark) %>>
   <% end %><br><br>
  <label>Or, Add New Landmark:</label>
- <input type="text" id="new_landmark" name="landmark[name]"><br></br>
+ <input type="text" id="new_landmark" name="landmark[name]"><br><br><br>
 
  <label>Edit Titles</label><br>
  <% Title.all.each do |title| %>
