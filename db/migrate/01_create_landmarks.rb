@@ -1,4 +1,4 @@
-class CreateLandmarks < ActiveRecord::Migration[5.1]
+class CreateLandmarks < ActiveRecord::Migration
   def change
     create_table :landmarks do |t|
       t.text :name
