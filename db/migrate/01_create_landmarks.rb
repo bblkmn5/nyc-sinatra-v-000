@@ -1,4 +1,4 @@
-class CreateLandmarks < ActiveRecord::Migration
+class CreateLandmarks < ActiveRecord::Migration[5.1]
   create_table :landmarks do |t|
     t.text :name
     t.integer :figure_id
