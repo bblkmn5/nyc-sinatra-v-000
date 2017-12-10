@@ -1,0 +1,11 @@
+<form method="POST" action="/figures">
+  <label>Name</label>
+    <input type="text" id="figure_name" name="figure[name]"><br>
+
+  <label>Titles</label>
+  <% Title.all.each do |title| %>
+    <label><%= title.name %></label>
+    <input type="checkbox" id="title_<%= title.id %>" name="figure[title_ids]">
+  <% end %>
+
+  
