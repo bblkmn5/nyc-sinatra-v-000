@@ -1,3 +1,1 @@
-class TitlesController < ApplicationController
 
-end
