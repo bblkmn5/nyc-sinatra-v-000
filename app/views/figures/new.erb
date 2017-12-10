@@ -1,15 +1,16 @@
-<form method="POST" action="/figures">
-  <label>Name</label>
-    <input type="text" id="figure_name" name="figure[name]"><br>
+<form action="/figures" method="POST">
+  <lable>Name</label>
+    <input type="text" id="figure_name" name="figure[name]"><br></br>
 
-  <label>Titles</label>
-  <% Title.all.each do |title| %>
-    <label><%= title.name %></label>
-    <input type="checkbox" id="title_<%= title.id %>" name="figure[title_ids][]" value="<% title.id" %>>
-  <% end %>
+  <label><h4>Titles</h4></label>
+    <% Title.all.each do |title| %>
+      <label><%= title.name %></label>
+      <input type="checkbox" id="title_<%=title.id%>" name="figure[title_ids][]" value="<%= title.id %>"><br>
 
-  <label><h4>Create New Title:</h4></label>
+    <% end %>
+ <label><h4>Create New Title:</h4></label>
   <input type="text" id="new_title" name="title[name]">
+
 
   <label><h4>Landmarks</h4></label>
     <% Landmark.all.each do |landmark| %>
